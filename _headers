@@ -1,0 +1,11 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/*.html
+  Content-Type: text/html; charset=utf-8
+  AMP-Cache-Transform: google;v="1..8"
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
