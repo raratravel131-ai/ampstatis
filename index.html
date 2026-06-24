@@ -4,8 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <title>Rara Travel & Tour - Jasa Transportasi Darat &amp; Logistik Terpercaya di Indonesia</title>
-  <meta name="description" content="Rara Travel & Tour - Jasa transportasi darat, logistik, dan travel terpercaya di Jember, Surabaya, Malang, dan Bali.">
-  <link rel="canonical" href="https://raratravel.id/">
+  <link rel="canonical" href="https://raratrave.id/">
   
   <!-- AMP Runtime & Components -->
   <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -14,10 +13,273 @@
   <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 
   <style amp-custom>
-    /* ... (semua CSS tetap sama seperti yang Anda miliki) ... */
+    /* ===== RESET & BASE ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f4f7fc;
+      color: #1a2a3a;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      background: linear-gradient(135deg, #0b2a4a 0%, #1a4a7a 100%);
+      color: #fff;
+      padding: 18px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo amp-img {
+      border-radius: 50%;
+    }
+    .logo h1 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .logo h1 span {
+      color: #f5c842;
+    }
+    .logo small {
+      display: block;
+      font-size: 11px;
+      font-weight: 300;
+      opacity: 0.8;
+      letter-spacing: 1px;
+    }
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+    }
+    .nav a:hover {
+      color: #f5c842;
+      border-bottom-color: #f5c842;
+    }
+    .nav a:first-child { margin-left: 0; }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, #0b2a4a 0%, #1a4a7a 100%);
+      color: #fff;
+      padding: 60px 0 50px;
+      text-align: center;
+      border-bottom: 4px solid #f5c842;
+    }
+    .hero h2 {
+      font-size: 38px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .hero h2 span { color: #f5c842; }
+    .hero p {
+      font-size: 18px;
+      max-width: 650px;
+      margin: 0 auto 24px;
+      opacity: 0.9;
+    }
+    .hero .btn {
+      display: inline-block;
+      background: #f5c842;
+      color: #0b2a4a;
+      padding: 14px 40px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .hero .btn:hover {
+      background: #e6b832;
+      transform: scale(1.03);
+    }
+
+    /* ===== SECTION UMUM ===== */
+    section { padding: 50px 0; }
+    .section-title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 700;
+      color: #0b2a4a;
+      margin-bottom: 10px;
+    }
+    .section-sub {
+      text-align: center;
+      color: #5a6a7a;
+      font-size: 16px;
+      margin-bottom: 36px;
+    }
+
+    /* ===== LAYANAN ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.10);
+    }
+    .service-card .icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .service-card h3 {
+      font-size: 18px;
+      color: #0b2a4a;
+      margin-bottom: 6px;
+    }
+    .service-card p {
+      font-size: 14px;
+      color: #5a6a7a;
+      margin: 0;
+    }
+
+    /* ===== TENTANG ===== */
+    .about-wrap {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .about-wrap .text { flex: 1; min-width: 260px; }
+    .about-wrap .text h3 {
+      font-size: 24px;
+      color: #0b2a4a;
+      margin-bottom: 12px;
+    }
+    .about-wrap .text p {
+      color: #3a4a5a;
+      margin-bottom: 12px;
+    }
+    .about-wrap .image { flex: 1; min-width: 240px; }
+    .about-wrap .image amp-img { border-radius: 12px; }
+
+    /* ===== KONTAK ===== */
+    .contact-wrap {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .contact-wrap .info { flex: 1; min-width: 220px; }
+    .contact-wrap .info p {
+      margin-bottom: 10px;
+      color: #2a3a4a;
+    }
+    .contact-wrap .info strong { color: #0b2a4a; }
+    .contact-wrap form {
+      flex: 1.5;
+      min-width: 260px;
+      background: #fff;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    }
+    .contact-wrap form input,
+    .contact-wrap form textarea {
+      width: 100%;
+      padding: 12px 16px;
+      margin-bottom: 14px;
+      border: 1px solid #dde4ec;
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: inherit;
+      transition: border 0.2s;
+    }
+    .contact-wrap form input:focus,
+    .contact-wrap form textarea:focus {
+      border-color: #1a4a7a;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(26,74,122,0.12);
+    }
+    .contact-wrap form button {
+      background: #0b2a4a;
+      color: #fff;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+      width: 100%;
+    }
+    .contact-wrap form button:hover {
+      background: #1a4a7a;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #0b1a2a;
+      color: #b0c4d8;
+      padding: 30px 0 20px;
+      text-align: center;
+      font-size: 14px;
+      border-top: 3px solid #f5c842;
+    }
+    .footer a {
+      color: #f5c842;
+      text-decoration: none;
+    }
+    .footer .copy {
+      margin-top: 12px;
+      font-size: 13px;
+      color: #6a7a8a;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .header-inner { flex-direction: column; text-align: center; }
+      .nav a { margin: 0 10px; font-size: 13px; }
+      .hero h2 { font-size: 28px; }
+      .hero p { font-size: 16px; }
+      .section-title { font-size: 24px; }
+      .about-wrap { flex-direction: column; }
+      .contact-wrap { flex-direction: column; }
+    }
+    @media (max-width: 480px) {
+      .logo h1 { font-size: 20px; }
+      .hero { padding: 40px 0 30px; }
+      .hero h2 { font-size: 22px; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+    }
   </style>
 
-  <!-- ===== SCHEMA JSON-LD (sudah diperbaiki) ===== -->
+  <!-- ===== SCHEMA JSON-LD ===== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -57,37 +319,123 @@
   }
   </script>
 </head>
-<body>
-  <!-- ... semua konten HTML tetap sama seperti Anda, 
-       kecuali bagian form yang saya sarankan diubah -->
-  ...
-  <!-- ===== KONTAK ===== -->
-  <section id="kontak">
-    <div class="container">
-      <h2 class="section-title">Hubungi Kami</h2>
-      <p class="section-sub">Siap melayani pertanyaan &amp; pemesanan Anda</p>
-      <div class="contact-wrap">
-        <div class="info">
-          <p><strong>📞 Telepon</strong><br>+62 812 2509 3894</p>
-          <p><strong>📧 Email</strong><br>info@raratravel.id</p>
-          <p><strong>📍 Alamat</strong><br>Jl. Kalimantan No.34, Krajan Timur, Sumbersari, Kec. Sumbersari, Kabupaten Jember, Jawa Timur 68121</p>
-          <p><strong>🕒 Jam Operasional</strong><br>Senin – Jumat, 07.00 – 21.00 WIB</p>
-        </div>
 
-        <!-- FORM yang sudah diperbaiki (gunakan Formspree atau endpoint sendiri) -->
-        <form method="POST" action-xhr="https://formspree.io/f/your-form-id" target="_top">
-          <input type="text" name="nama" placeholder="Nama Lengkap" required>
-          <input type="email" name="email" placeholder="Alamat Email" required>
-          <input type="tel" name="telepon" placeholder="Nomor Telepon">
-          <textarea name="pesan" rows="4" placeholder="Tulis pesan atau kebutuhan Anda..." required></textarea>
-          <button type="submit">Kirim Pesan</button>
-        </form>
-        <!-- Catatan: Ganti 'your-form-id' dengan ID form dari Formspree, atau gunakan endpoint sendiri -->
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="container header-inner">
+    <div class="logo">
+      <amp-img src="https://raratravel.id/wp-content/uploads/2026/06/Gemini_Generated_Image_2w9t542w9t542w9t-removebg-preview.png" 
+               width="50" height="50" alt="Logo Rara Travel & Tour">
+      </amp-img>
+      <div>
+        <h1>RARATRAVEL<span>.ID</span></h1>
+        <small>Transportasi &amp; Logistik</small>
       </div>
     </div>
-  </section>
+    <nav class="nav">
+      <a href="#home">Beranda</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- FOOTER tetap sama -->
-  ...
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="container">
+    <h2>Solusi Transportasi <span>Andal</span> &amp; <span>Terpercaya</span></h2>
+    <p>Melayani jasa angkutan darat, pengiriman barang, dan travel antar kota dengan armada modern &amp; pengemudi profesional.</p>
+    <a href="https://wa.me/c/6281225093894" class="btn">Hubungi Kami</a>
+  </div>
+</section>
+
+<!-- ===== LAYANAN ===== -->
+<section id="layanan">
+  <div class="container">
+    <h2 class="section-title">Layanan Kami</h2>
+    <p class="section-sub">Armada lengkap untuk kebutuhan transportasi Anda</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="icon">🚐</span>
+        <h3>Travel Antar Kota</h3>
+        <p>Rute Jember, Surabaya, Malang, Bali, dan kota lainnya.</p>
+      </div>
+      <div class="service-card">
+        <span class="icon">📦</span>
+        <h3>Pengiriman Barang</h3>
+        <p>Logistik darat untuk paket besar &amp; kecil dengan harga kompetitif.</p>
+      </div>
+      <div class="service-card">
+        <span class="icon">🏢</span>
+        <h3>Sewa Kendaraan</h3>
+        <p>Bus, Hiace, dan elf untuk wisata, study tour, &amp; corporate event.</p>
+      </div>
+      <div class="service-card">
+        <span class="icon">🚛</span>
+        <h3>Angkutan Truk</h3>
+        <p>Pengiriman barang dalam skala besar dengan truk box &amp; tronton.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TENTANG ===== -->
+<section id="tentang" style="background:#fff;">
+  <div class="container">
+    <h2 class="section-title">Tentang Rara Travel & Tour</h2>
+    <p class="section-sub">Berpengalaman sejak 2010, melayani ribuan pelanggan</p>
+    <div class="about-wrap">
+      <div class="text">
+        <h3>Mitra Transportasi Anda</h3>
+        <p><strong>Rara Travel & Tour</strong> adalah perusahaan penyedia jasa transportasi darat yang berkomitmen memberikan layanan aman, nyaman, dan tepat waktu.</p>
+        <p>Didukung armada modern yang terawat dan pengemudi berpengalaman, kami siap mengantarkan Anda dan barang ke tujuan dengan standar keselamatan tinggi.</p>
+        <p><strong>Visi:</strong> Menjadi perusahaan transportasi terdepan di Indonesia yang mengutamakan kepuasan pelanggan.</p>
+        <p><strong>Misi:</strong> Memberikan solusi mobilitas yang efisien, transparan, dan berkelanjutan.</p>
+      </div>
+      <div class="image">
+        <amp-img src="https://raratravel.id/wp-content/uploads/2026/06/image-4.png" 
+                 width="500" height="300" layout="responsive" alt="Armada Rara Travel & Tour">
+        </amp-img>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KONTAK ===== -->
+<section id="kontak">
+  <div class="container">
+    <h2 class="section-title">Hubungi Kami</h2>
+    <p class="section-sub">Siap melayani pertanyaan &amp; pemesanan Anda</p>
+    <div class="contact-wrap">
+      <div class="info">
+        <p><strong>📞 Telepon</strong><br>+62 812 2509 3894</p>
+        <p><strong>📧 Email</strong><br>info@raratravel.id</p>
+        <p><strong>📍 Alamat</strong><br>Jl. Kalimantan No.34, Krajan Timur, Sumbersari, Kec. Sumbersari, Kabupaten Jember, Jawa Timur 68121</p>
+        <p><strong>🕒 Jam Operasional</strong><br>Senin – Jumat, 07.00 – 21.00 WIB</p>
+      </div>
+
+      <!-- AMP Form -->
+      <form method="POST" action-xhr="https://wa.me/c/6281225093894" target="_top">
+        <input type="text" name="nama" placeholder="Nama Lengkap" required>
+        <input type="email" name="email" placeholder="Alamat Email" required>
+        <input type="tel" name="telepon" placeholder="Nomor Telepon">
+        <textarea name="pesan" rows="4" placeholder="Tulis pesan atau kebutuhan Anda..." required></textarea>
+        <button type="submit">Kirim Pesan</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 <strong>Rara Travel & Tour</strong> — Jasa Transportasi &amp; Logistik Terpercaya</p>
+    <p class="copy">Dikelola oleh PT Raratrans Energi Persada | <a href="https://raratravel.id">Rara Travel & Tour</a></p>
+  </div>
+</footer>
+
 </body>
 </html>
